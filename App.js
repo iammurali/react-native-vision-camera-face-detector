@@ -55,7 +55,7 @@ export default function App() {
     return function cleanup() {
       CFPaymentGatewayService.removeCallback();
     };
-  });
+  }, [response_text]);
 
   let startCheckout = async () => {
     console.log('Checkout starts here')
